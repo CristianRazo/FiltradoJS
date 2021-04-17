@@ -53,7 +53,10 @@ function mostrarAutos(cars) {
       resultado.appendChild(autoHTML);
     });
   } else {
-    resultado.innerHTML = "<p>No se encontraron coincidencias</p>";
+    const sinResultados = document.createElement("div");
+    sinResultados.classList.add("alerta", "error");
+    sinResultados.textContent = "No se encontraron coincidencias";
+    resultado.appendChild(sinResultados);
   }
 }
 
